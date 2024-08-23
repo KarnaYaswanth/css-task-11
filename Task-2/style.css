@@ -1,0 +1,60 @@
+img {
+display: block;
+width: 150px;
+height: 150px;
+margin: 100px;
+transition: transform 0.4s ease;
+}
+.container{
+display: flex;
+justify-content: center;
+align-items: center;
+height: 700px;
+/* background-color: lightslategrey; */
+background-image: url(../batman\ wallpaper.jpg);
+}
+.item {
+border: 2px solid;
+width: 400px;
+height: 400px;
+padding: 40px;
+background-color: slategrey;
+}
+
+.items {
+display: flex;
+gap: 20px;
+}
+
+.items label {
+border: 2px solid darkgreen;
+padding: 5px;
+margin: 10px;
+border-radius: 10px;
+cursor: pointer;
+}
+
+.items label:hover {
+background-color: rosybrown;
+}
+
+#rotate,#scale,#skew,#matrix {
+display: none;
+}
+
+#rotate:hover ~ .img{
+transform: rotate(360deg);
+transition: 3s ease;
+}
+
+#scale:hover ~ .img{
+transform: scale(1.5);
+}
+
+#skew:hover ~ .img{
+transform: skewX(50deg);
+}
+
+#matrix:hover ~ .img{
+transform: matrix(2, 0.3, 0.3, 2, 0, 0);
+}
